@@ -1,7 +1,18 @@
 import { useState } from "react";
 
-export const TextEditor = () => {
-  const [text, setText] = useState("");
+import { EditorProvider, FloatingMenu, BubbleMenu } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
 
-  return <div></div>;
+const extensions = [StarterKit];
+
+export const TextEditor = () => {
+  const [content, setContent] = useState("");
+
+  return (
+    <div>
+      <EditorProvider extensions={extensions} content={content}>
+        {""}
+      </EditorProvider>
+    </div>
+  );
 };
