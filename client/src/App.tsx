@@ -3,8 +3,8 @@ import { TextEditor } from "./components/TextEditor";
 
 function App() {
   return (
-    <div>
-      Write Below:
+    <div className="bg-slate-200 flex flex-col items-center">
+      <div>Write Below:</div>
       <TextEditor />
     </div>
   );
